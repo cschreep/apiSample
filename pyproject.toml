@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "closesample"
+version = "0.1.0"
+description = ""
+authors = ["Carl Schreep <carl.schreep@fastmail.com>"]
+readme = "README.md"
+packages = [
+    { include = "api_counter", from="src" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+Flask = "^3.0.2"
+flask-redis = "^0.4.0"
+gunicorn = "^21.2.0"
+coverage = "^7.4.1"
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.2.0"
+pytest = "^8.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
